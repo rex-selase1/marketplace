@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,700;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Roboto&display=swap");
 
 :root{
     --grey-color: rgb(242, 243, 245);
@@ -12,7 +13,7 @@
     text-transform: capitalize;
     box-sizing: border-box;
     transition: all 0.1s ease-in;
-    font-family: 'Nunito',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -42,11 +43,15 @@ body{
 }
 /* header section begins here */
 .header{
+    width: 100vw;
+    top: 0;
+    z-index: 22222;
+    position: fixed;
     height: 60px;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    box-shadow: 0px 0px 5px 5px  rgb(217, 217, 218);
+    background-color:darkblue;
+    box-shadow: 0px 0px 5px 10px  rgba(6, 6, 151, 0.2);
     
 }
 .header .header-wrapper{
@@ -108,6 +113,47 @@ input[type="search"]:focus{
 }
 /* header section ends here  */
 
+/* category section */
+.bar{
+    width: 100%;
+    color: white;
+    
+    background-color: rgb(2, 2, 56);
+    margin-top: 65px;
+    height: 40px;
+    
+   
+
+}
+
+.bar ul{
+    width: 90%;
+    margin: 10px auto;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+    padding-left: 10px;
+    color: white;
+    align-items: center;
+    
+}
+.bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.bar ul li a:hover{
+    padding:2px;
+    background-color: darkblue;
+}
+
+
+/* category section ends here */
+
 /* top free section begins */
 .top-free a{
     text-decoration: none;
@@ -118,7 +164,7 @@ input[type="search"]:focus{
 .top-free{
     
     width: 95%;
-    margin: 30px;
+    margin: 30px auto;
     margin-bottom: 20px;
 }
 .top-free a h2{
@@ -127,8 +173,8 @@ input[type="search"]:focus{
     text-align: left;
     color: darkblue;
     margin-left: 10px;
-    font-size: 20px;
-    width: 12%;
+    font-size: 22px;
+    width: 13%;
     align-items: center;
     justify-content: center;
     font-weight: 800;
@@ -139,7 +185,7 @@ text-align: center;
 margin-left: 20px;
 color: white;
 border-radius: 5px;
-background-color: rgb(145, 145, 245);
+background-color: darkblue;
 }
 
 
@@ -147,7 +193,7 @@ background-color: rgb(145, 145, 245);
     width: 100%;
     margin:15px auto;
     display: grid;
-    padding-left: 30px;
+    padding-left: 25px;
     grid-template-columns: auto auto auto;
     gap: 15px;
     
@@ -185,7 +231,7 @@ border: 2px solid var(--grey-color);
     width: 100%;
     margin-top: 15px;
     color: rgb(3, 3, 40);
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 5px;
     text-align: left;
     
@@ -318,15 +364,26 @@ font-size: 14px;
 #banner{
     width: 100%;
     margin: 20px auto;
-    border: 2px solid;
-    background-color: whitesmoke;
+    height: 400px;
+    position: relative;
+    box-shadow: 1px 0px 6px 10px rgba(197, 110, 5,0.2);
+    /* border: 2px solid; */
+    /* background-color: whitesmoke; */
 }
 #banner img{
-    width: 95%;
-    display: flex;
-    margin: auto;
-    max-height: 600px;
+    width: 100%;
+    z-index: 111;
+    max-height: 400px;
 }
+/* #banner .overlay .on-top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 10;
+    background-color:rgba(20, 47, 247, 0.2);
+} */
 /* banner section ends here */
 
 /* streaming apps section */
@@ -342,7 +399,7 @@ font-size: 14px;
     color: darkblue;
     margin-left: 20px;
     font-size: 20px;
-    width: 12%;
+    width: 13%;
     align-items: center;
     justify-content: center;
     font-weight: 800;
@@ -353,7 +410,7 @@ text-align: center;
 margin-left: 30px;
 color: white;
 border-radius: 5px;
-background-color: rgb(145, 145, 245);
+background-color: darkblue;
 }
 .stream-apps{
     width: 100%;
@@ -379,6 +436,7 @@ border: 2px solid  rgb(239, 239, 243);
 transition: 0.5s ease;
 }
 .stream-apps .cards .card:hover{
+    background-color: #f9f7f7;
     transform: scaleY(1.03);
     box-shadow: 1px 1px 2px 1px rgb(229, 226, 226);
 }
@@ -418,11 +476,12 @@ transition: 0.5s ease;
     text-align: center;
     width: 100%;
     height: 50%;
+    color: black;
 }
 .stream-apps .cards .card .detail h3{
     font-size: 15px;
     margin-top: 10px;
-    padding-left: 7px;
+    padding-left: 15px;
     text-align: left;
     color: black;
 }
@@ -431,7 +490,8 @@ transition: 0.5s ease;
     display: flex;
     margin-top: 35px;
     gap:125px;
-    padding-left: 10px;
+    padding-left: 15px;
+    font-size: 14px;
 }
 .stream-apps .cards .card .detail .r-and-p i{
     font-size: 10px;
@@ -444,3 +504,118 @@ transition: 0.5s ease;
     background-color: var(--grey-color);
 }
 /* streaming apps end here */
+
+/* movie zone */
+.movies{
+    width: 100%;
+}
+.movies a {
+    text-decoration: none;
+}
+  .movies a h2{
+    margin: 10px;
+    text-transform: capitalize;
+    display: block;
+    text-align: left;
+    color: darkblue;
+    margin-left: 20px;
+    font-size: 22px;
+    width: 16%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+ .movies a h2:hover{
+    text-align: center;
+    margin-left: 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: darkblue;
+    }
+
+ .movies .cards{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+gap: 10px;
+ }   
+ .movies .card{
+    width: 98%;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    
+ }
+ .movies .cards .card img{
+    width: 98%;
+    height: 420px;
+    border-radius: 7px;
+ }
+ .movies .cards .card:hover{
+    transform: scale(1.03);
+    
+ }
+ .movies .overlay{
+    display: block;
+    width: 98%;
+    height: 70px;
+   padding-left: 20px;
+    top: 81.5%;
+    
+    
+    border-radius: 5px;
+    position: absolute;
+    background-color: rgba(55, 53, 53, 0.95);
+ }
+ .movies .overlay .detail{
+    display: flex;
+    width: 98%;
+    font-size: 16px;
+    margin-top: 5px;
+    color: white;
+    
+    gap: 140px;
+ }
+ .movies .overlay .detail .price{
+    background-color: darkblue;
+    padding: 2px;
+    font-size: 13px;
+    border-radius: 3px;
+ }
+ .movies .overlay .detail i{
+    font-size: 12px;
+ }
+ .movies .overlay h3{
+    color: white;
+    margin-top: 5px;
+    font-size: 17px;
+ }
+ /* movies ends here */
+ footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: darkblue;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 100px;
+    gap: 80px;
+    color: white;
+    line-height: 1.5;
+ }
+ footer img{
+    width: 250px;
+    
+ }
+ footer h3{
+    font-size: 22px;
+ }
+ footer .top{
+    margin-top: -15px;
+ }
+ footer .copy span{
+    color:rgb(235, 159, 93);
+ }
